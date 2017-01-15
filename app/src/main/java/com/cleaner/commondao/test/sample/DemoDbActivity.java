@@ -53,7 +53,6 @@ public class DemoDbActivity extends Activity {
         });
 
         LogUtils.d("main", "-------start--------");
-        dao.openDatabase(true); // if db version update,this method will wait util onUpgrade has been executed.
         LogUtils.d("main", "-------middle--------");
         tablesManager = TablesManager.getInstance();
         tablesManager.register(Person.class);
@@ -66,7 +65,6 @@ public class DemoDbActivity extends Activity {
             @Override
             public void onClick(View v) {
                 dao = dbManager.getDao(null);
-                dao.openDatabase(true);
             }
         });
 
@@ -166,14 +164,6 @@ public class DemoDbActivity extends Activity {
         setContentView(contentView);
 
 
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        tablesManager.destroyInstance();
-        dao.close();
     }
 
 

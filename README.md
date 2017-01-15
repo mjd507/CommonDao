@@ -16,7 +16,6 @@
 - 创建数据库
     ```
         DbDao dao = dbManager.getDao(null); //param  --> dbUpdateListener -- see DemoDbActivity how to use
-        dao.openDatabase(true); // params --> isWritableDatabase
     ```
 
 - 创建表
