@@ -5,7 +5,6 @@
 ### 配置
 - 在 Application onCreate() 时初始化 DbManager
     ```
-        //初始化 数据库
         DbManager.DbParams params = new DbManager.DbParams();
         params.dbName = "xx.db";
         params.dbVersion = 1;
