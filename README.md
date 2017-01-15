@@ -3,13 +3,13 @@
 可能是最简单的数据库封装,算上注解总共只有 8 个类,使用方法:
 
 ### 配置
-- 在 Application onCreate() 时初始化 DbManager
-    ```
-        DbManager.DbParams params = new DbManager.DbParams();
-        params.dbName = "xx.db";
-        params.dbVersion = 1;
-        dbManager = DbManager.getInstance(this, params);
-    ```
+在 Application onCreate() 时初始化 DbManager
+```
+    DbManager.DbParams params = new DbManager.DbParams();
+    params.dbName = "xx.db";
+    params.dbVersion = 1;
+    dbManager = DbManager.getInstance(this, params);
+```
 
 ### 建库 建表
 - 创建数据库
