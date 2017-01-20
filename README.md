@@ -8,7 +8,7 @@
     DbManager.DbParams params = new DbManager.DbParams();
     params.dbName = "xx.db";
     params.dbVersion = 1;
-    dbManager = DbManager.getInstance(this, params);
+    DbManager.getInstance().init(this, params);
 ```
 
 ### 建库 建表

@@ -35,7 +35,7 @@ public class DemoDbActivity extends Activity {
         contentView.setOrientation(LinearLayout.VERTICAL);
 
         MyApplication application = (MyApplication) getApplication();
-        dbManager = application.getDbManager();
+        dbManager = DbManager.getInstance();
         //创建数据库
         dao = dbManager.getDao(new DbManager.DbUpdateListener() {
             @Override
